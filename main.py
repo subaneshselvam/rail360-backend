@@ -28,114 +28,114 @@ RAPID_RAIL_HOST = "indian-railway-irctc.p.rapidapi.com"
 IRCTC_URL = "https://indian-railway-irctc.p.rapidapi.com/api/trains/v1/train/status"
 
 # ------------------------
-# STATION → CITY MAP (for weather)
+# STATION → CITY MAP (for weather & pretty names)
 # ------------------------
 
 STATION_TO_CITY = {
     "NDLS": "New Delhi",
-    "HWH": "Howrah",
-    "BCT": "Mumbai",
-    "CSMT": "Mumbai",
-    "MAS": "Chennai",
-    "SBC": "Bengaluru",
-    "HYB": "Hyderabad",
+    "HWH": "Howrah Junction",
+    "BCT": "Mumbai Central",
+    "CSMT": "Mumbai CST",
+    "MAS": "Chennai Central",
+    "SBC": "Bengaluru City",
+    "HYB": "Hyderabad Deccan",
     "SC": "Secunderabad",
     "SDAH": "Sealdah",
-    "ADI": "Ahmedabad",
-    "PUNE": "Pune",
-    "PNBE": "Patna",
-    "CNB": "Kanpur",
-    "PRYJ": "Prayagraj",
-    "JP": "Jaipur",
-    "LKO": "Lucknow",
-    "GKP": "Gorakhpur",
-    "BSB": "Varanasi",
+    "ADI": "Ahmedabad Junction",
+    "PUNE": "Pune Junction",
+    "PNBE": "Patna Junction",
+    "CNB": "Kanpur Central",
+    "PRYJ": "Prayagraj Junction",
+    "JP": "Jaipur Junction",
+    "LKO": "Lucknow Charbagh",
+    "GKP": "Gorakhpur Junction",
+    "BSB": "Varanasi Junction",
     "GHY": "Guwahati",
     "CDG": "Chandigarh",
-    "BPL": "Bhopal",
+    "BPL": "Bhopal Junction",
     "GWL": "Gwalior",
     "JBP": "Jabalpur",
-    "CBE": "Coimbatore",
-    "TVC": "Thiruvananthapuram",
-    "ERS": "Ernakulam",
-    "MDU": "Madurai",
+    "CBE": "Coimbatore Junction",
+    "TVC": "Thiruvananthapuram Central",
+    "ERS": "Ernakulam Junction",
+    "MDU": "Madurai Junction",
     "TPJ": "Tiruchirappalli",
     "VSKP": "Visakhapatnam",
     "BZA": "Vijayawada",
     "BBS": "Bhubaneswar",
     "CTC": "Cuttack",
-    "R": "Raipur",
+    "R": "Raipur Junction",
     "BSP": "Bilaspur",
     "NGP": "Nagpur",
-    "ASR": "Amritsar",
-    "LDH": "Ludhiana",
+    "ASR": "Amritsar Junction",
+    "LDH": "Ludhiana Junction",
     "JUC": "Jalandhar City",
     "JAT": "Jammu Tawi",
-    "UDZ": "Udaipur",
-    "AII": "Ajmer",
-    "JU": "Jodhpur",
-    "KOTA": "Kota",
+    "UDZ": "Udaipur City",
+    "AII": "Ajmer Junction",
+    "JU": "Jodhpur Junction",
+    "KOTA": "Kota Junction",
     "ST": "Surat",
     "BRC": "Vadodara",
     "RJT": "Rajkot",
-    "BVC": "Bhavnagar",
+    "BVC": "Bhavnagar Terminus",
     "MAO": "Madgaon",
-    "MAJN": "Mangaluru",
-    "UBL": "Hubballi",
-    "MYS": "Mysuru",
-    "SA": "Salem",
-    "ED": "Erode",
+    "MAJN": "Mangaluru Junction",
+    "UBL": "Hubballi Junction",
+    "MYS": "Mysuru Junction",
+    "SA": "Salem Junction",
+    "ED": "Erode Junction",
     "NLR": "Nellore",
     "TPTY": "Tirupati",
     "GNT": "Guntur",
     "WL": "Warangal",
     "KZJ": "Kazipet",
     "REWA": "Rewa",
-    "ET": "Itarsi",
-    "RTM": "Ratlam",
-    "JHS": "Jhansi",
-    "AGC": "Agra",
-    "MTJ": "Mathura",
-    "ALJN": "Aligarh",
+    "ET": "Itarsi Junction",
+    "RTM": "Ratlam Junction",
+    "JHS": "Jhansi Junction",
+    "AGC": "Agra Cantt",
+    "MTJ": "Mathura Junction",
+    "ALJN": "Aligarh Junction",
     "MTC": "Meerut City",
     "FD": "Faizabad",
     "AY": "Ayodhya Dham",
-    "BE": "Bareilly",
+    "BE": "Bareilly Junction",
     "MB": "Moradabad",
     "DDN": "Dehradun",
     "HW": "Haridwar",
     "KGM": "Kathgodam",
     "RKSH": "Rishikesh",
     "TATA": "Tatanagar",
-    "ASN": "Asansol",
-    "DHN": "Dhanbad",
+    "ASN": "Asansol Junction",
+    "DHN": "Dhanbad Junction",
     "RNC": "Ranchi",
     "HTE": "Hatia",
-    "GAYA": "Gaya",
+    "GAYA": "Gaya Junction",
     "BGP": "Bhagalpur",
     "MFP": "Muzaffarpur",
     "DBG": "Darbhanga",
     "SV": "Siwan",
     "SPJ": "Samastipur",
-    "BJU": "Barauni",
+    "BJU": "Barauni Junction",
     "BXR": "Buxar",
     "ARA": "Arrah",
-    "DURG": "Durg",
-    "UMB": "Ambala",
+    "DURG": "Durg Junction",
+    "UMB": "Ambala Cantt",
     "ROK": "Rohtak",
     "HSR": "Hisar",
     "RE": "Rewari",
     "DEE": "Delhi Sarai Rohilla",
-    "ANVT": "Anand Vihar",
-    "BDTS": "Bandra",
-    "LTT": "Lokmanya Tilak",
+    "ANVT": "Anand Vihar Terminal",
+    "BDTS": "Bandra Terminus",
+    "LTT": "Lokmanya Tilak Terminus",
     "DR": "Dadar",
     "CCG": "Churchgate",
     "VSH": "Vashi",
     "PNVL": "Panvel",
     "VR": "Virar",
-    "BSR": "Vasai",
-    "NK": "Nashik",
+    "BSR": "Vasai Road",
+    "NK": "Nashik Road",
     "BSL": "Bhusaval",
     "JL": "Jalgaon",
     "AK": "Akola",
@@ -147,7 +147,7 @@ STATION_TO_CITY = {
     "DGR": "Durgapur",
     "MLDT": "Malda Town",
     "NJP": "New Jalpaiguri",
-    "SGUJ": "Siliguri",
+    "SGUJ": "Siliguri Junction",
     "APDJ": "Alipurduar",
     "KNE": "Kishanganj",
     "KIR": "Katihar",
@@ -194,10 +194,10 @@ STATION_TO_CITY = {
     "TLHR": "Talcher",
     "BLS": "Balasore",
     "BHC": "Bhadrak",
-    "JJKR": "Jajpur Keonjhar",
+    "JJKR": "Jajpur Keonjhar Road",
     "DNKL": "Dhenkanal",
     "VZM": "Vizianagaram",
-    "CHE": "Srikakulam",
+    "CHE": "Srikakulam Road",
     "RJY": "Rajahmundry",
     "EE": "Eluru",
     "CCT": "Kakinada Town",
@@ -208,7 +208,7 @@ STATION_TO_CITY = {
     "NLDA": "Nalgonda",
     "NED": "Nanded",
     "LUR": "Latur",
-    "LTRR": "Latur",
+    "LTRR": "Latur Road",
     "PBN": "Parbhani",
     "BUU": "Buldhana",
     "J": "Jalna",
@@ -220,7 +220,7 @@ STATION_TO_CITY = {
     "STR": "Satara",
     "RN": "Ratnagiri",
     "KUDL": "Kudal",
-    "SWV": "Sawantwadi",
+    "SWV": "Sawantwadi Road",
     "BGM": "Belgavi",
     "BGK": "Bagalkot",
     "GDG": "Gadag",
@@ -232,11 +232,11 @@ STATION_TO_CITY = {
     "TEN": "Tirunelveli",
     "NCJ": "Nagercoil",
     "CAPE": "Kanyakumari",
-    "PGT": "Palakkad",
+    "PGT": "Palakkad Junction",
     "CAN": "Kannur",
     "CLT": "Kozhikode",
     "KGQ": "Kasaragod",
-    "QLN": "Kollam",
+    "QLN": "Kollam Junction",
     "ALLP": "Alappuzha",
     "KTYM": "Kottayam",
     "TCR": "Thrissur",
@@ -257,7 +257,7 @@ STATION_TO_CITY = {
     "MV": "Mayiladuthurai",
     "KMU": "Kumbakonam",
     "MQ": "Mannargudi",
-    "TJ": "Thanjavur",
+    "TJ": "Thanjavur Junction",
     "PDKT": "Pudukkottai",
     "SVGA": "Sivaganga",
     "RMD": "Ramanathapuram",
@@ -281,7 +281,7 @@ STATION_TO_CITY = {
     "AB": "Ambur",
     "GYM": "Gudiyatham",
     "NVL": "Neyveli",
-    "BNC": "Bangalore",
+    "BNC": "Bangalore Cantonment",
     "YNK": "Yelahanka",
     "CBP": "Chikkaballapur",
     "KQZ": "Kolar",
@@ -296,16 +296,16 @@ STATION_TO_CITY = {
     "KCG": "Kacheguda",
     "MCI": "Mancherial",
     "RDM": "Ramagundam",
-    "BDCR": "Bhadrachalam",
+    "BDCR": "Bhadrachalam Road",
     "KMT": "Khammam",
     "STPT": "Suryapet",
     "MRGA": "Miryalaguda",
     "GLP": "Gollaprolu",
-    "MRK": "Markapur",
+    "MRK": "Markapur Road",
     "DKD": "Donakonda",
     "NRT": "Narasaraopet",
     "PGRL": "Piduguralla",
-    "BVRM": "Bhimavaram",
+    "BVRM": "Bhimavaram Junction",
     "TNKU": "Tanuku",
     "NS": "Narsapur",
     "MTM": "Machilipatnam",
@@ -314,7 +314,7 @@ STATION_TO_CITY = {
     "PER": "Perambur",
     "SPE": "Sullurupeta",
     "NLS": "Nellore South",
-    "RU": "Renigunta",
+    "RU": "Renigunta Junction",
     "PAK": "Pakala",
     "KPN": "Kuppam",
     "BWT": "Bangarpet",
@@ -326,7 +326,7 @@ STATION_TO_CITY = {
     "ASK": "Arsikere",
     "HAS": "Hassan",
     "SKLR": "Sakleshpur",
-    "SBHR": "Subrahmanya",
+    "SBHR": "Subrahmanya Road",
     "KUDA": "Kundapura",
     "UD": "Udupi",
     "BYNR": "Byndoor",
@@ -368,15 +368,15 @@ STATION_TO_CITY = {
     "MDSA": "Modasa",
     "BIH": "Bhopal Bairagarh",
     "SEH": "Sehore",
-    "UJN": "Ujjain",
+    "UJN": "Ujjain Junction",
     "DWX": "Dewas",
     "SFY": "Shajapur",
     "MKC": "Maksi",
     "BIX": "Bhind",
     "MRA": "Morena",
     "ETAH": "Etah",
-    "HRS": "Hathras",
-    "TDL": "Tundla",
+    "HRS": "Hathras Junction",
+    "TDL": "Tundla Junction",
     "KSJ": "Kasganj",
     "AWR": "Alwar",
     "BTE": "Bharatpur",
@@ -384,30 +384,30 @@ STATION_TO_CITY = {
     "TNK": "Tonk",
     "BUDI": "Bundi",
     "BAZ": "Baran",
-    "JLWC": "Jhalawar",
+    "JLWC": "Jhalawar Road",
     "BHL": "Bhilwara",
     "COR": "Chittorgarh",
-    "GGC": "Gangapur",
+    "GGC": "Gangapur City",
     "BXN": "Bayana",
     "DO": "Dausa",
     "NGO": "Nagaur",
-    "SIKR": "Sikar",
+    "SIKR": "Sikar Junction",
     "JJN": "Jhunjhunu",
     "BNW": "Bhiwani",
     "PWL": "Palwal",
     "HDL": "Hodal",
-    "MRT": "Mathura",
-    "HTJ": "Hathras",
+    "MRT": "Mathura Cantt",
+    "HTJ": "Hathras Road",
     "BLNR": "Gwalior Birlanagar",
     "DAA": "Datia",
     "DBA": "Dabra",
-    "SOH": "Sirohi",
-    "ABR": "Abu",
+    "SOH": "Sirohi Road",
+    "ABR": "Abu Road",
     "FA": "Falna",
     "PMY": "Pali Marwar",
     "RANI": "Rani",
-    "MJ": "Marwar",
-    "LUNI": "Luni",
+    "MJ": "Marwar Junction",
+    "LUNI": "Luni Junction",
     "PAP": "Pithapuram",
     "KTV": "Kothavalasa",
     "VBL": "Bobbili",
@@ -419,26 +419,26 @@ STATION_TO_CITY = {
     "KSNG": "Kesinga",
     "KBJ": "Kantabanji",
     "BLGR": "Balangir",
-    "BRGA": "Bargarh",
-    "JSGR": "Jharsuguda",
+    "BRGA": "Bargarh Road",
+    "JSGR": "Jharsuguda Road",
     "SDGH": "Sundargarh",
     "CMU": "Champua",
     "BPO": "Baripada",
     "BGY": "Bangriposi",
     "JER": "Jaleswar",
-    "KGP": "Kharagpur",
+    "KGP": "Kharagpur Junction",
     "SRC": "Santragachi",
     "SHM": "Shalimar",
-    "BDC": "Bandel",
-    "BWN": "Barddhaman",
+    "BDC": "Bandel Junction",
+    "BWN": "Barddhaman Junction",
     "TAK": "Tarakeswar",
     "DKAE": "Dankuni",
     "BP": "Barrackpore",
     "NH": "Naihati",
     "KYI": "Kalyani",
-    "KNJ": "Krishnanagar",
-    "RHA": "Ranaghat",
-    "BNJ": "Bangaon",
+    "KNJ": "Krishnanagar City",
+    "RHA": "Ranaghat Junction",
+    "BNJ": "Bangaon Junction",
     "HB": "Habra",
     "BSHT": "Basirhat",
     "SHE": "Seoraphuli",
@@ -446,7 +446,7 @@ STATION_TO_CITY = {
     "UPA": "Uttarpara",
     "BLY": "Bally",
     "BRMH": "Belur Math",
-    "DDJ": "Dum Dum",
+    "DDJ": "Dum Dum Junction",
     "BT": "Barasat",
     "BRT": "Birati",
     "MMG": "Madhyamgram",
@@ -459,7 +459,7 @@ STATION_TO_CITY = {
     "NHT": "Nalhati",
     "AZ": "Azimganj",
     "MBB": "Murshidabad",
-    "JRLE": "Jangipur",
+    "JRLE": "Jangipur Road",
     "FKK": "Farakka",
     "KDPR": "Kumedpur",
     "SM": "Samsi",
@@ -471,7 +471,7 @@ STATION_TO_CITY = {
     "RJL": "Rajmahal",
     "GODA": "Godda",
     "DGHR": "Deoghar",
-    "JSME": "Jasidih",
+    "JSME": "Jasidih Junction",
     "MDP": "Madhupur",
     "GRD": "Giridih",
     "DUMK": "Dumka",
@@ -480,13 +480,13 @@ STATION_TO_CITY = {
     "CRJ": "Chittaranjan",
     "ULT": "Kulti",
     "BRR": "Barakar",
-    "UDL": "Andal",
+    "UDL": "Andal Junction",
     "SNT": "Sainthia",
     "NNA": "Naugachia",
     "KGG": "Khagaria",
     "MNE": "Mansi",
     "LKN": "Lakhminia",
-    "JMP": "Jamalpur",
+    "JMP": "Jamalpur Junction",
     "KIUL": "Kiul",
     "JAJ": "Jhajha",
     "MBI": "Madhubani",
@@ -498,8 +498,8 @@ STATION_TO_CITY = {
     "STD": "Sitabdiara",
     "GAP": "Gopalganj",
     "CPR": "Chapra",
-    "SEE": "Sonepur",
-    "HJP": "Hajipur",
+    "SEE": "Sonepur Junction",
+    "HJP": "Hajipur Junction",
     "DNR": "Danapur",
     "FUT": "Fatuha",
     "BKP": "Bakhtiyarpur",
@@ -514,7 +514,7 @@ STATION_TO_CITY = {
     "LTHR": "Latehar",
     "BRWD": "Barwadih",
     "DTO": "Daltonganj",
-    "GHD": "Garhwa",
+    "GHD": "Garhwa Road",
     "RNQ": "Renukoot",
     "CPU": "Chopan",
     "OBR": "Obra",
@@ -523,47 +523,14 @@ STATION_TO_CITY = {
     "MZP": "Mirzapur",
     "CAR": "Chunar",
     "BOY": "Bhadohi",
-    "JNU": "Jaunpur",
+    "JNU": "Jaunpur Junction",
     "SHG": "Shahganj",
     "AMH": "Azamgarh",
-    "CBE": "Coimbatore",
-    "MDU": "Madurai",
-    "TPJ": "Tiruchirappalli",
-    "SA": "Salem",
-    "ED": "Erode",
-    "TUP": "Tiruppur",
-    "DG": "Dindigul",
-    "KRR": "Karur",
-    "TEN": "Tirunelveli",
-    "NCJ": "Nagercoil",
-    "CAPE": "Kanyakumari",
-    "TN": "Tuticorin",
-    "VPT": "Virudhunagar",
-    "SVKS": "Sivakasi",
-    "RMM": "Rameswaram",
-    "RMD": "Ramanathapuram",
-    "SVGA": "Sivaganga",
-    "PDKT": "Pudukkottai",
-    "TJ": "Thanjavur",
-    "KMU": "Kumbakonam",
-    "MV": "Mayiladuthurai",
-    "VM": "Villupuram",
-    "VRI": "Virudhachalam",
-    "TBM": "Tambaram",
-    "KPD": "Katpadi",
-    "TNM": "Tiruvannamalai",
-    "DHJ": "Dharmapuri",
-    "HSRA": "Hosur",
-    "TCN": "Tiruchendur",
-    "CVP": "Kovilpatti",
-    "POY": "Pollachi",
-    "PLNI": "Palani",
-    "AJJ": "Arakkonam",
-    "CGL": "Chengalpattu",
-    "BNC": "Bangalore",
-    "MAJN": "Mangaluru",
-    "GIM": "Goa"
+    "MS": "Chennai Egmore"
 }
+
+# We also use this as "full pretty name" map
+STATION_FULL_NAME = STATION_TO_CITY
 
 # ------------------------
 # WEATHER HELPER
@@ -629,7 +596,6 @@ def get_weather_for_city(city: str):
 def get_train_status(train_number: str, departure_date: str):
     """
     Calls RapidAPI IRCTC live train status.
-
     departure_date format: YYYYMMDD (example: 20251130)
     """
 
@@ -666,7 +632,6 @@ def get_train_status(train_number: str, departure_date: str):
                 "raw": data,
             }
 
-        # For this IRCTC API, live data is in "body"
         body = data.get("body", {})
 
         train_name = (
@@ -675,21 +640,12 @@ def get_train_status(train_number: str, departure_date: str):
             or f"Train {train_number}"
         )
 
-        last_update = (
-            body.get("server_timestamp")
-            or "N/A"
-        )
-
-        current_location = (
-            body.get("current_station")
-            or "Location not available"
-        )
-
+        last_update = body.get("server_timestamp") or "N/A"
+        current_location = body.get("current_station") or "Location not available"
         status_msg = body.get("train_status_message", "")
         terminated = body.get("terminated", False)
 
-        # No explicit delay in this response → keep 0 or compute later
-        delay_min = 0
+        delay_min = 0  # not directly provided
 
         return {
             "has_issue": False,
@@ -739,38 +695,104 @@ def rail_360(train_no: str, station_code: str, departure_date: str | None = None
     # 1) Live train (IRCTC)
     live = get_train_status(train_no, departure_date)
 
-    # 2) Weather at station's city
-    city = STATION_TO_CITY.get(station_code.upper(), station_code)
-    weather = get_weather_for_city(city)
-
     lines = []
     lines.append("🚆 Rail 360 – Live Status")
 
+    # Prepare weather variables
+    origin_code = dest_code = None
+    origin_city = dest_city = current_city = None
+    origin_weather = dest_weather = current_weather = None
+
     if live["has_issue"]:
+        # On error, just show message + weather at requested station_code
         lines.append(f"Train: {train_no}")
         lines.append(f"⚠️ {live['message']}")
-    else:
-        lines.append(f"Train: {live['train_no']} – {live['train_name']}")
-        lines.append(f"Location: {live['segment']}")
-        lines.append(f"Last Update: {live['last_update']}")
-        lines.append(f"Delay (approx): {live['delay_min']} min")
 
-        if live.get("status_msg"):
-            lines.append(f"Status: {live['status_msg']}")
-        if live.get("terminated"):
-            lines.append("✅ Train has reached its destination.")
+        city = STATION_TO_CITY.get(station_code.upper(), station_code)
+        weather = get_weather_for_city(city)
+        lines.append("")
+        lines.append(f"At station: {station_code}")
+        lines.append("")
+        lines.append(f"🌦 Weather at {city}: {weather['summary']} ({weather['temperature']})")
+
+        return {
+            "text": "\n".join(lines),
+            "train": live,
+            "weather": {
+                "origin": None,
+                "current": weather,
+                "destination": None,
+            },
+        }
+
+    # ------------ SUCCESS CASE ------------
+
+    # Train info
+    lines.append(f"Train: {live['train_no']} – {live['train_name']}")
+
+    # Full station name for current segment
+    station_full = STATION_FULL_NAME.get(live['segment'], live['segment'])
+    lines.append(f"Location: {station_full} ({live['segment']})")
+    lines.append(f"Last Update: {live['last_update']}")
+    lines.append(f"Delay (approx): {live['delay_min']} min")
+
+    if live.get("status_msg"):
+        lines.append(f"Status: {live['status_msg']}")
+    if live.get("terminated"):
+        lines.append("✅ Train has reached its destination.")
+
+    # 2) Weather: origin, current, destination (Chennai → Madurai style)
+    body = live.get("raw", {}).get("body", {})
+    stations = body.get("stations") or []
+
+    if stations:
+        origin_code = stations[0].get("stationCode")
+        dest_code = stations[-1].get("stationCode")
+
+        if origin_code:
+            origin_city = STATION_TO_CITY.get(origin_code, origin_code)
+            origin_weather = get_weather_for_city(origin_city)
+
+        if dest_code:
+            dest_city = STATION_TO_CITY.get(dest_code, dest_code)
+            dest_weather = get_weather_for_city(dest_city)
+
+    seg_code = live.get("segment")
+    if seg_code:
+        current_city = STATION_TO_CITY.get(seg_code, seg_code)
+        current_weather = get_weather_for_city(current_city)
 
     lines.append("")
-    lines.append(f"At station: {station_code}")
-    lines.append("(ETA parsing from IRCTC raw JSON can be added later.)")
+    lines.append(f"Route station param: {station_code}")
 
     lines.append("")
-    lines.append(f"🌦 Weather at {city}: {weather['summary']} ({weather['temperature']})")
+    # Origin weather
+    if origin_city and origin_weather:
+        lines.append(
+            f"🌦 Origin ({origin_code} – {origin_city}): "
+            f"{origin_weather['summary']} ({origin_weather['temperature']})"
+        )
+    # Current weather
+    if current_city and current_weather:
+        lines.append(
+            f"🌦 Current ({seg_code} – {current_city}): "
+            f"{current_weather['summary']} ({current_weather['temperature']})"
+        )
+    # Destination weather
+    if dest_city and dest_weather:
+        lines.append(
+            f"🌦 Destination ({dest_code} – {dest_city}): "
+            f"{dest_weather['summary']} ({dest_weather['temperature']})"
+        )
 
     return {
         "text": "\n".join(lines),
         "train": live,
-        "weather": weather,
+        "weather": {
+            "origin": origin_weather,
+            "current": current_weather,
+            "destination": dest_weather,
+        },
     }
 
 
@@ -783,3 +805,4 @@ def root():
             "/api/rail-360?train_no=12051&station_code=MAS&departure_date=20251130",
         ],
     }
+
