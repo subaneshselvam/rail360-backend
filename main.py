@@ -35,7 +35,7 @@ STATION_TO_CITY = {
     "NDLS": "New Delhi",
     "HWH": "Howrah Junction",
     "BCT": "Mumbai Central",
-    "CSMT": "Mumbai CST",
+    "CSMT": "Mumbai",
     "MAS": "Chennai Central",
     "SBC": "Bengaluru City",
     "HYB": "Hyderabad Deccan",
@@ -893,5 +893,6 @@ def root():
             "/api/rail-360?train_no=12051&station_code=MAS&departure_date=20251130",
         ],
     }
+
 
 
