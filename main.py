@@ -527,7 +527,7 @@ STATION_TO_CITY = {
     "JNU": "Jaunpur Junction",
     "SHG": "Shahganj",
     "AMH": "Azamgarh",
-    "MS": "Chennai"
+    "MS": "Chennai",
     "SA": "Salem"
 
 }
@@ -896,6 +896,7 @@ def root():
             "/api/rail-360?train_no=12051&station_code=MAS&departure_date=20251130",
         ],
     }
+
 
 
 
