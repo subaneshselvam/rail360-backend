@@ -57,6 +57,7 @@ STATION_TO_CITY = {
     "CBE": "Coimbatore Junction",
     "TVC": "Thiruvananthapuram Central",
     "ERS": "Ernakulam Junction",
+    "TMV": "Tindivanam",
     "MDU": "Madurai Junction",
     "TPJ": "Tiruchirappalli",
     "VSKP": "Visakhapatnam",
@@ -895,6 +896,7 @@ def root():
             "/api/rail-360?train_no=12051&station_code=MAS&departure_date=20251130",
         ],
     }
+
 
 
 
