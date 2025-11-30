@@ -671,12 +671,100 @@ def get_train_status(train_number: str, departure_date: str):
 # ENDPOINTS
 # ------------------------
 
-@app.get("/api/weather")
-def weather(city: str):
-    """Just weather: /api/weather?city=Chennai"""
-    info = get_weather_for_city(city)
-    text = f"🌦 Weather in {info['city']}: {info['summary']} ({info['temperature']})"
-    return {"text": text, "raw": info}
+@app.get("/api/rail-360-two-weather")
+def rail_360_two_weather(train_no: str, departure_date: str | None = None):
+    """
+    Train live status + weather at current station AND destination station.
+
+    Example:
+    /api/rail-360-two-weather?train_no=12051&departure_date=20251130
+    """
+
+    # Default departure_date = today if not given
+    if not departure_date:
+        departure_date = datetime.now().strftime("%Y%m%d")
+
+    # 1) Live train info
+    live = get_train_status(train_no, departure_date)
+
+    # Prepare defaults in case IRCTC data is missing
+    current_code = None
+    dest_code = None
+
+    body = live.get("raw", {}).get("body", {}) if not live.get("has_issue") else {}
+    stations = body.get("stations", [])
+
+    # current station code
+    if not live.get("has_issue"):
+        current_code = body.get("current_station")
+        # IRCTC sometimes gives full code in live['segment'] as well
+        if not current_code:
+            current_code = live.get("segment")
+
+    # destination station = last station in the list
+    if stations:
+        dest_code = stations[-1].get("stationCode")
+
+    # Map codes → city names
+    current_city = (
+        STATION_TO_CITY.get(current_code, current_code)
+        if current_code else "Unknown"
+    )
+    dest_city = (
+        STATION_TO_CITY.get(dest_code, dest_code)
+        if dest_code else "Unknown"
+    )
+
+    # 2) Weather for both
+    current_weather = get_weather_for_city(current_city) if current_city != "Unknown" else {
+        "city": current_city,
+        "summary": "N/A",
+        "temperature": "N/A",
+    }
+    dest_weather = get_weather_for_city(dest_city) if dest_city != "Unknown" else {
+        "city": dest_city,
+        "summary": "N/A",
+        "temperature": "N/A",
+    }
+
+    # 3) Build text reply
+    lines = []
+    lines.append("🚆 Rail 360 – Live Status + Dual Weather")
+
+    if live["has_issue"]:
+        lines.append(f"Train: {train_no}")
+        lines.append(f"⚠️ {live['message']}")
+    else:
+        lines.append(f"Train: {live['train_no']} – {live['train_name']}")
+        lines.append(f"Last Update: {live['last_update']}")
+        if live.get("status_msg"):
+            lines.append(f"Status: {live['status_msg']}")
+        if live.get("terminated"):
+            lines.append("✅ Train has reached its destination.")
+
+    lines.append("")
+
+    # current station weather
+    lines.append(f"📍 Current station: {current_city} ({current_code or 'N/A'})")
+    lines.append(
+        f"   🌦 {current_weather['summary']} ({current_weather['temperature']})"
+    )
+
+    lines.append("")
+
+    # destination station weather
+    lines.append(f"🏁 Destination: {dest_city} ({dest_code or 'N/A'})")
+    lines.append(
+        f"   🌦 {dest_weather['summary']} ({dest_weather['temperature']})"
+    )
+
+    return {
+        "text": "\n".join(lines),
+        "train": live,
+        "current_weather": current_weather,
+        "destination_weather": dest_weather,
+    }
+
 
 
 @app.get("/api/rail-360")
@@ -805,4 +893,5 @@ def root():
             "/api/rail-360?train_no=12051&station_code=MAS&departure_date=20251130",
         ],
     }
+
 
