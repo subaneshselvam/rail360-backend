@@ -526,7 +526,8 @@ STATION_TO_CITY = {
     "JNU": "Jaunpur Junction",
     "SHG": "Shahganj",
     "AMH": "Azamgarh",
-    "MS": "Chennai Egmore"
+    "MS": "Chennai"
+
 }
 
 # We also use this as "full pretty name" map
@@ -893,6 +894,7 @@ def root():
             "/api/rail-360?train_no=12051&station_code=MAS&departure_date=20251130",
         ],
     }
+
 
 
 
